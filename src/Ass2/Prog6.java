@@ -18,6 +18,6 @@ public class Prog6 {
                 min=arr1[i];
             }
         }
-        System.out.println(min);;
+        System.out.println("The minimum integer from the array is =  "+min);;
     }
 }
