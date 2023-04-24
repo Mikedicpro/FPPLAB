@@ -3,8 +3,10 @@ package ass1;
 public class Assignment1of2 {
 
 
+    private static Object RandomNumbers;
+
     public static void main(String[] args) {
-        long randNums = RandomNumbers.getRandomInt(0, 2_000_000_000);
+        long randNums = ass1.RandomNumbers.getRandomInt(0, 2_000_000_000);
         System.out.println(randNums);
 
         if (randNums >= Byte.MIN_VALUE && randNums <= Byte.MAX_VALUE) {

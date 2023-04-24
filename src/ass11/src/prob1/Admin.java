@@ -13,11 +13,15 @@ public class Admin {
 		//students.forEach(s->map.put(new Key(s.getFirstName(),s.getLastName()),s));
 		return map;
 	}
-	public static double computeAverageGPA(HashMap<Key,Student> maps){		Map<Key,Student> map = new HashMap<>();
-		double totalGpa=0.0;
-		for(Student student:maps.values()){
-			totalGpa += student.getGpa();
-		}
-		return totalGpa/maps.size();
+
+	public static double computeAverageGPA(HashMap<Key, Student> maps) {
+		Map<Key, Student> map = new HashMap<>();
+		double totalGPA = 0.0;
+		for(Student s: maps.values()) totalGPA += s.getGpa();
+		return  totalGPA/ maps.size();
+/*		return maps.values()
+				.stream()
+				.mapToDouble(Student::getGpa)
+				.average().getAsDouble();*/
 	}
 }
